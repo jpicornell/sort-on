@@ -50,7 +50,7 @@ module.exports = (arr, prop) => {
 				return ret !== 0;
 			}
 			
-			if (x instanceOf Date && y instanceOf Date) {
+			if (x instanceof Date && y instanceof Date) {
 				if (desc) {
 					ret = x.getTime() < y.getTime() ? 1 : -1;
 				} else {
