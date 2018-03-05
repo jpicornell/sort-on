@@ -49,6 +49,15 @@ module.exports = (arr, prop) => {
 				ret = desc ? y.localeCompare(x) : x.localeCompare(y);
 				return ret !== 0;
 			}
+			
+			if (x instanceOf Date && y instanceOf Date) {
+				if (desc) {
+					ret = x.getTime() < y.getTime() ? 1 : -1;
+				} else {
+					ret = x.getTime() < y.getTime() ? -1 : 1;
+				}
+				return ret !== 0;
+			}
 
 			if (desc) {
 				ret = x < y ? 1 : -1;
